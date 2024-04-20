@@ -1,6 +1,6 @@
-# telegram_notification_reminder_bot
-# Simple Python Script - Notification Reminder Telegram Bot
-# Authored by - Vinay Kumar Sahu | Email: vinaykumar.sahu093@gmail.com | Insta ID: me_vinay_sahu
+## telegram_notification_reminder_bot
+## Simple Python Script - Notification Reminder Telegram Bot
+#### Authored by - Vinay Kumar Sahu | Email: vinaykumar.sahu093@gmail.com | Insta ID: me_vinay_sahu
 '''
 This is simple Python script bot to get birthday reminder on Telegram of your beloved ones.
 Easy to configure & deploy.
