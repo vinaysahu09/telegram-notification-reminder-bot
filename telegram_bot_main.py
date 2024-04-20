@@ -136,11 +136,17 @@ class Notifier:
             # Get number of working days in a month (excludes Saturdays & Sundays)
             month_working_days = np.busday_count(self.today_date_yyyy_only + '-' + self.today_date_mm_only,
                                                  self.today_date_yyyy_only + '-' + f'{int(self.today_date_mm_only)+1:02d}')
+            next_month_working_days = np.busday_count(self.today_date_yyyy_only + '-' + f'{int(self.today_date_mm_only) + 1:02d}',
+                                                 self.today_date_yyyy_only + '-' + f'{int(self.today_date_mm_only) + 2:02d}')
             sixty_percent_days = math.ceil(month_working_days * 0.6)
+            next_month_sixty_percent_days = math.ceil(next_month_working_days * 0.6)
             text_message = (
-                f"Month: {self.today_date_mm_only}, {self.today_date_yyyy_only}\n"
+                f"This Month: {self.today_date_mm_only}, {self.today_date_yyyy_only}\n"
                 f"Working days for this month: {month_working_days} days\n"
-                f"Sixty percent attendance: {sixty_percent_days} days"
+                f"Sixty percent attendance: {sixty_percent_days} days\n\n"
+                f"Next Month: {int(self.today_date_mm_only)+1:02d}, {self.today_date_yyyy_only}\n"
+                f"Working days for next month: {next_month_working_days} days\n"
+                f"Sixty percent attendance: {next_month_sixty_percent_days} days"
             )
             print(text_message)
             telegram_send_msg(text_message)
