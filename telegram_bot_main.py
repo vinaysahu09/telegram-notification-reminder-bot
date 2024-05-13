@@ -6,7 +6,7 @@ Easy to configure & deploy.
 ------- Follow the Guidelines below ----------
 
 1. No Installation required
-2. Create your Telegram API KEY with "BotFather"
+2. First create your own Telegram bot with the help of "BotFather" and get the Telegram API KEY
 3. Get your CHAT ID with this link: https://api.telegram.org/bot<API_KEY>/getUpdates
 4. Add these two values to the script
 5. Add the birthdates in form of dictionary to the script
